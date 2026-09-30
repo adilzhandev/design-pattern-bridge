@@ -1,0 +1,65 @@
+diff --git a/src/Main.java b/src/Main.java
+index 284a322..5f02d8c 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -1,5 +1,6 @@
+ import bridge.format.Formatter;
+ import bridge.format.HtmlFormatter;
++import bridge.format.MarkdownFormatter;
+ import bridge.format.TextFormatter;
+ import bridge.report.AttendanceReport;
+ import bridge.report.GradeReport;
+@@ -23,6 +24,10 @@ public class Main {
+             "GRADE REPORT GR-1\ngrades: 70, 80, 90\naverage: 80";
+     private static final String EXPECTED_T4 =
+             "<article><h1>Grade Report GR-1</h1><ul><li>grades: 70, 80, 90</li><li>average: 80</li></ul></article>";
++    private static final String EXPECTED_T6 =
++            "# Attendance Report AR-1\n\n- **attended:** 3/4\n- **rate:** 75%";
++    private static final String EXPECTED_T7 =
++            "# Grade Report GR-1\n\n- **grades:** 70, 80, 90\n- **average:** 80";
+     private static final String EXPECTED_STATE = "id=AR-1 attended=3/4 rate=75%";
+ 
+     private int passed;
+@@ -39,12 +44,15 @@ public class Main {
+     private void runDemo() {
+         Formatter text = new TextFormatter();
+         Formatter html = new HtmlFormatter();
++        Formatter markdown = new MarkdownFormatter();
+ 
+         checkCombination("T1", newAttendanceReport(text), text, EXPECTED_T1);
+         checkCombination("T2", newAttendanceReport(html), html, EXPECTED_T2);
+         checkCombination("T3", newGradeReport(text), text, EXPECTED_T3);
+         checkCombination("T4", newGradeReport(html), html, EXPECTED_T4);
+         checkRuntimeSwitch();
++        checkCombination("T6", newAttendanceReport(markdown), markdown, EXPECTED_T6);
++        checkCombination("T7", newGradeReport(markdown), markdown, EXPECTED_T7);
+ 
+         System.out.println("SUMMARY: " + passed + "/" + total + " PASS"
+                 + (passed == total ? "" : " (" + (total - passed) + " FAIL)"));
+diff --git a/src/bridge/format/MarkdownFormatter.java b/src/bridge/format/MarkdownFormatter.java
+new file mode 100644
+index 0000000..d89a7ca
+--- /dev/null
++++ b/src/bridge/format/MarkdownFormatter.java
+@@ -0,0 +1,21 @@
++package bridge.format;
++
++import java.util.List;
++
++public class MarkdownFormatter implements Formatter {
++
++    @Override
++    public String heading(String title) {
++        return "# " + title;
++    }
++
++    @Override
++    public String field(String label, String value) {
++        return "- **" + label + ":** " + value;
++    }
++
++    @Override
++    public String document(String heading, List<String> fields) {
++        return heading + "\n\n" + String.join("\n", fields);
++    }
++}
