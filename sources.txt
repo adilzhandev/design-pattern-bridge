@@ -5,3 +5,4 @@ src/bridge/report/GradeReport.java
 src/bridge/format/Formatter.java
 src/bridge/format/TextFormatter.java
 src/bridge/format/HtmlFormatter.java
+src/bridge/format/MarkdownFormatter.java
