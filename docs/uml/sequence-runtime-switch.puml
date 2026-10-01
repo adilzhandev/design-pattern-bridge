@@ -1,0 +1,21 @@
+@startuml sequence-runtime-switch
+!include style.iuml
+hide footbox
+participant "Main\n(T5)" as M
+participant "original / current:\nAttendanceReport" as R
+participant ":TextFormatter" as T
+participant ":HtmlFormatter" as H
+
+M -> R : new AttendanceReport("AR-1", 3, 4, text)
+M -> R : execute()
+R -> T : heading / field / document
+T --> R
+R --> M : before = "ATTENDANCE REPORT AR-1 ..."
+M -> R : current.setImplementation(html)
+note over R : only the formatter field\nis re-pointed; id, attended,\ntotalSessions stay the same
+M -> R : current.execute()
+R -> H : heading / field / document
+H --> R
+R --> M : after = "<article><h1>Attendance Report AR-1 ..."
+M -> M : current == original → true\nstate unchanged → true
+@enduml

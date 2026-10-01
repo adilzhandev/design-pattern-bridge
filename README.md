@@ -78,6 +78,11 @@ Final line: `SUMMARY: 7/7 PASS`. The actual captured run is in [demo-output.txt]
 git diff 0da31fcda61f99ef99560021967baacf06fd89cf HEAD -- src > extension.diff
 ```
 
+## UML
+
+PlantUML sources of the diagrams used in `report.pdf` are in [docs/uml/](docs/uml/):
+`class-diagram.puml`, `sequence-execute.puml`, `sequence-runtime-switch.puml` (shared style in `style.iuml`).
+
 ## Submission files
 
 `src/`, `sources.txt`, `README.md`, `report.pdf`, `demo-output.txt`, `extension.diff`.

@@ -1,0 +1,26 @@
+!pragma layout smetana
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam ArrowColor #37474F
+skinparam ArrowThickness 1.2
+skinparam ClassBorderColor #37474F
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassHeaderBackgroundColor #E3ECF7
+skinparam ClassAttributeIconSize 0
+skinparam ClassFontStyle bold
+skinparam PackageBorderColor #90A4AE
+skinparam PackageBackgroundColor #FAFBFC
+skinparam PackageFontColor #455A64
+skinparam StereotypeFontColor #546E7A
+skinparam NoteBackgroundColor #FFF8E1
+skinparam NoteBorderColor #FFB300
+skinparam SequenceLifeLineBorderColor #90A4AE
+skinparam SequenceParticipantBorderColor #37474F
+skinparam SequenceParticipantBackgroundColor #E3ECF7
+skinparam SequenceGroupBorderColor #90A4AE
+skinparam SequenceGroupBackgroundColor #F5F7FA
+skinparam LegendBackgroundColor #FFFFFF
+skinparam LegendBorderColor #B0BEC5
+skinparam LegendFontSize 11

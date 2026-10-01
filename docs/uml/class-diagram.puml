@@ -1,0 +1,100 @@
+@startuml class-diagram
+!include style.iuml
+hide empty members
+skinparam nodesep 40
+skinparam ranksep 55
+set separator none
+
+class Main <<client>> #FFF8E7 {
+  - passed: int
+  - total: int
+  + {static} main(String[]): void
+  - runDemo(): void
+  - {static} newAttendanceReport(Formatter): AttendanceReport
+  - {static} newGradeReport(Formatter): GradeReport
+  - checkCombination(String, Report, Formatter, String): void
+  - checkRuntimeSwitch(): void
+  - {static} stateOf(AttendanceReport): String
+  - record(boolean): void
+  - {static} verdict(boolean): String
+  - {static} classNames(Report, Formatter): String
+  - {static} simpleName(Object): String
+  - {static} oneLine(String): String
+}
+
+package "bridge.report — Abstraction" {
+  abstract class Report {
+    - id: String
+    - formatter: Formatter
+    # Report(String, Formatter)
+    + getId(): String
+    + setImplementation(Formatter): void
+    + execute(): String
+    # {abstract} title(): String
+    # {abstract} content(): Map<String, String>
+  }
+  class AttendanceReport {
+    - attended: int
+    - totalSessions: int
+    + AttendanceReport(String, int, int, Formatter)
+    + getAttended(): int
+    + getTotalSessions(): int
+    + attendanceRate(): int
+    # title(): String
+    # content(): Map<String, String>
+  }
+  class GradeReport {
+    - grades: List<Integer>
+    + GradeReport(String, List<Integer>, Formatter)
+    + getGrades(): List<Integer>
+    + average(): int
+    # title(): String
+    # content(): Map<String, String>
+  }
+}
+
+package "bridge.format — Implementor" {
+  interface Formatter {
+    + heading(String): String
+    + field(String, String): String
+    + document(String, List<String>): String
+  }
+  class TextFormatter {
+    + heading(String): String
+    + field(String, String): String
+    + document(String, List<String>): String
+  }
+  class HtmlFormatter {
+    + heading(String): String
+    + field(String, String): String
+    + document(String, List<String>): String
+    - {static} escape(String): String
+  }
+  class MarkdownFormatter #EAF6EA {
+    + heading(String): String
+    + field(String, String): String
+    + document(String, List<String>): String
+  }
+}
+
+Report <|-- AttendanceReport
+Report <|-- GradeReport
+Formatter <|.. TextFormatter
+Formatter <|.. HtmlFormatter
+Formatter <|.. MarkdownFormatter
+Report o-right-> "1" Formatter : <b><color:#1565C0>bridge</color></b>\n-formatter
+
+Main ..> Report : <<use>>
+Main ..> Formatter : <<use>>
+Main ..> AttendanceReport : <<create>>
+Main ..> GradeReport : <<create>>
+Main ..> TextFormatter : <<create>>
+Main ..> HtmlFormatter : <<create>>
+Main ..> MarkdownFormatter : <<create>>
+
+legend right
+  <back:#EAF6EA>  MarkdownFormatter  </back> I3, added in the extension commit
+  o--> bridge reference (interface-typed field)
+  {static} members are underlined, {abstract} in italics
+endlegend
+@enduml

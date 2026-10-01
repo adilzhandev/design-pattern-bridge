@@ -1,0 +1,29 @@
+@startuml sequence-execute
+!include style.iuml
+autonumber "<b>0."
+hide footbox
+participant "Main" as M
+participant "report:\nAttendanceReport" as R
+participant "formatter:\nFormatter" as F
+
+M -> R : execute()
+activate R
+R -> R : content()
+note right of R : attended → "3/4"\nrate → "75%"
+loop for each label/value pair
+  R -> F : field(label, value)
+  activate F
+  F --> R : formatted field
+  deactivate F
+end
+R -> F : heading(title() + " " + id)
+activate F
+F --> R : formatted heading
+deactivate F
+R -> F : document(heading, fields)
+activate F
+F --> R : full document
+deactivate F
+R --> M : result String
+deactivate R
+@enduml
