@@ -8,7 +8,6 @@
 | Repository | https://github.com/adilzhandev/design-pattern-bridge |
 | Base commit (I1/I2 working version) | `f792bfcf9a09335e83511945646d362ce0a2c29d` |
 | Extension commit (I3 added) | `be6c91dbb5c5785a017b3d81de69b58e8569dace` |
-| Submitted source commit | `70a798f85d88714003ff61110471175202beb35f` |
 
 ## Role map
 
