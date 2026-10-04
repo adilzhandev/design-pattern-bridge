@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2120" height="1540" viewBox="0 0 2120 1540"><rect width="2120" height="1540" fill="white"/><rect x="190" y="60" width="540" height="84" fill="#e6edf5"/>
+<rect x="190" y="60" width="540" height="380" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="460.0" y="90" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#52606d">«abstract»</text>
+<text x="460.0" y="122" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="italic" text-anchor="middle" fill="#1f2933">Shape</text>
+<line x1="190" y1="144" x2="730" y2="144" stroke="#1f2933" stroke-width="2"/>
+<text x="208" y="176" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-id: String</text>
+<text x="208" y="208" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-renderer: Renderer</text>
+<line x1="190" y1="228" x2="730" y2="228" stroke="#1f2933" stroke-width="2"/>
+<text x="208" y="260" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">#Shape(id: String, renderer: Renderer)</text>
+<text x="208" y="292" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+execute(): String</text>
+<text x="208" y="324" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+setImplementation(renderer: Renderer): void</text>
+<text x="208" y="356" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+getId(): String</text>
+<text x="208" y="388" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="start" fill="#1f2933">#draw(renderer: Renderer): String {abstract}</text>
+<text x="208" y="420" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">#requirePositive(value: int, name: String): int</text>
+<rect x="1250" y="60" width="520" height="84" fill="#e6edf5"/>
+<rect x="1250" y="60" width="520" height="168" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1510.0" y="90" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#52606d">«interface»</text>
+<text x="1510.0" y="122" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">Renderer</text>
+<line x1="1250" y1="144" x2="1770" y2="144" stroke="#1f2933" stroke-width="2"/>
+<text x="1268" y="176" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderCircle(radius: int): String</text>
+<text x="1268" y="208" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderSquare(side: int): String</text>
+<rect x="40" y="560" width="400" height="56" fill="#e6edf5"/>
+<rect x="40" y="560" width="400" height="224" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="240.0" y="596" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">Circle</text>
+<line x1="40" y1="616" x2="440" y2="616" stroke="#1f2933" stroke-width="2"/>
+<text x="58" y="648" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-radius: int</text>
+<line x1="40" y1="668" x2="440" y2="668" stroke="#1f2933" stroke-width="2"/>
+<text x="58" y="700" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+Circle(id, radius, renderer)</text>
+<text x="58" y="732" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+getRadius(): int</text>
+<text x="58" y="764" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">#draw(renderer: Renderer): String</text>
+<rect x="480" y="560" width="400" height="56" fill="#e6edf5"/>
+<rect x="480" y="560" width="400" height="224" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="680.0" y="596" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">Square</text>
+<line x1="480" y1="616" x2="880" y2="616" stroke="#1f2933" stroke-width="2"/>
+<text x="498" y="648" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-side: int</text>
+<line x1="480" y1="668" x2="880" y2="668" stroke="#1f2933" stroke-width="2"/>
+<text x="498" y="700" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+Square(id, side, renderer)</text>
+<text x="498" y="732" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+getSide(): int</text>
+<text x="498" y="764" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">#draw(renderer: Renderer): String</text>
+<rect x="960" y="560" width="340" height="56" fill="#e6edf5"/>
+<rect x="960" y="560" width="340" height="192" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1130.0" y="596" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">VectorRenderer</text>
+<line x1="960" y1="616" x2="1300" y2="616" stroke="#1f2933" stroke-width="2"/>
+<text x="978" y="648" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-PREFIX: String = &quot;VECTOR&quot;</text>
+<line x1="960" y1="668" x2="1300" y2="668" stroke="#1f2933" stroke-width="2"/>
+<text x="978" y="700" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderCircle(radius: int): String</text>
+<text x="978" y="732" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderSquare(side: int): String</text>
+<rect x="1330" y="560" width="340" height="56" fill="#e6edf5"/>
+<rect x="1330" y="560" width="340" height="224" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1500.0" y="596" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">RasterRenderer</text>
+<line x1="1330" y1="616" x2="1670" y2="616" stroke="#1f2933" stroke-width="2"/>
+<text x="1348" y="648" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-PREFIX: String = &quot;RASTER&quot;</text>
+<line x1="1330" y1="668" x2="1670" y2="668" stroke="#1f2933" stroke-width="2"/>
+<text x="1348" y="700" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderCircle(radius: int): String</text>
+<text x="1348" y="732" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderSquare(side: int): String</text>
+<text x="1348" y="764" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-grid(size: int): String</text>
+<rect x="1700" y="560" width="380" height="84" fill="#e3f1e4"/>
+<rect x="1700" y="560" width="380" height="316" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1890.0" y="590" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#52606d">«I3 — extension»</text>
+<text x="1890.0" y="622" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">AsciiRenderer</text>
+<line x1="1700" y1="644" x2="2080" y2="644" stroke="#1f2933" stroke-width="2"/>
+<text x="1718" y="676" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-PREFIX: String = &quot;ASCII&quot;</text>
+<text x="1718" y="708" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-CIRCLE_FILL: String = &quot;o&quot;</text>
+<text x="1718" y="740" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-SQUARE_FILL: String = &quot;#&quot;</text>
+<text x="1718" y="772" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-ROW_SEPARATOR: String = &quot;/&quot;</text>
+<line x1="1700" y1="792" x2="2080" y2="792" stroke="#1f2933" stroke-width="2"/>
+<text x="1718" y="824" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderCircle(radius: int): String</text>
+<text x="1718" y="856" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+renderSquare(side: int): String</text>
+<rect x="760" y="990" width="600" height="84" fill="#e6edf5"/>
+<rect x="760" y="990" width="600" height="508" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1060.0" y="1020" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#52606d">«client»</text>
+<text x="1060.0" y="1052" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">Main</text>
+<line x1="760" y1="1074" x2="1360" y2="1074" stroke="#1f2933" stroke-width="2"/>
+<text x="778" y="1106" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-DEMO_FLAG: String = &quot;--demo&quot;</text>
+<text x="778" y="1138" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-CIRCLE_RADIUS: int = 2</text>
+<text x="778" y="1170" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-SQUARE_SIDE: int = 3</text>
+<text x="778" y="1202" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-passed: int</text>
+<text x="778" y="1234" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-total: int</text>
+<line x1="760" y1="1254" x2="1360" y2="1254" stroke="#1f2933" stroke-width="2"/>
+<text x="778" y="1286" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">+main(args: String[]): void</text>
+<text x="778" y="1318" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-runDemo(): void</text>
+<text x="778" y="1350" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-checkCombination(id, shape, renderer, expected): void</text>
+<text x="778" y="1382" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-checkRuntimeSwitch(id, first, second, expBefore, expAfter): void</text>
+<text x="778" y="1414" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-classNames(shape, renderer): String</text>
+<text x="778" y="1446" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-report(id, pass, details, expected): void</text>
+<text x="778" y="1478" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">-printSummary(): void</text>
+<polygon points="460.0,440 445.7,466 474.3,466" fill="white" stroke="#1f2933" stroke-width="2"/>
+<path d="M460.0,466 L460.0,500" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M240.0,500 L680.0,500" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M240.0,500 L240.0,560" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M680.0,500 L680.0,560" fill="none" stroke="#1f2933" stroke-width="2"/>
+<polygon points="1510.0,228 1495.7,254 1524.3,254" fill="white" stroke="#1f2933" stroke-width="2"/>
+<path d="M1510.0,254 L1510.0,500" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M1130.0,500 L1890.0,500" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M1130.0,500 L1130.0,560" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M1500.0,500 L1500.0,560" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M1890.0,500 L1890.0,560" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polygon points="730,186 745.0,178.0 760,186 745.0,194.0" fill="white" stroke="#1f2933" stroke-width="2"/>
+<path d="M760,186 L1250,186" fill="none" stroke="#1f2933" stroke-width="2.5"/>
+<polyline points="1232,175.2 1250,186 1232,196.8" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="990.0" y="152" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" font-style="normal" text-anchor="middle" fill="#1f2933">«bridge»</text>
+<text x="990.0" y="174" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="middle" fill="#52606d">-renderer: Renderer</text>
+<text x="1236" y="212" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" font-style="normal" text-anchor="end" fill="#1f2933">1</text>
+<text x="990.0" y="212" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" font-style="italic" text-anchor="middle" fill="#52606d">composition through the interface</text>
+<path d="M1060.0,990 L1060.0,920" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M240.0,920 L1890.0,920" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<path d="M240.0,920 L240.0,784" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="229.2,802 240.0,784 250.8,802" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M680.0,920 L680.0,784" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="669.2,802 680.0,784 690.8,802" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M1130.0,920 L1130.0,752" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="1119.2,770 1130.0,752 1140.8,770" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M1500.0,920 L1500.0,784" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="1489.2,802 1500.0,784 1510.8,802" fill="none" stroke="#1f2933" stroke-width="2"/>
+<path d="M1890.0,920 L1890.0,876" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="1879.2,894 1890.0,876 1900.8,894" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="1072.0" y="960" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="start" fill="#52606d">«creates»</text>
+<path d="M760,1050 L16,1050 L16,250 L190,250" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="172,239.2 190,250 172,260.8" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="26" y="240" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="start" fill="#52606d">«uses»</text>
+<path d="M1360,1050 L2104,1050 L2104,140 L1770,140" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="1788,129.2 1770,140 1788,150.8" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="2094" y="130" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="end" fill="#52606d">«uses»</text>
+<rect x="40" y="1110" width="560" height="330" fill="white" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="64" y="1150" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#1f2933">Legend</text>
+<path d="M64,1198 L164,1198" fill="none" stroke="#1f2933" stroke-width="2"/>
+<polygon points="190,1198 164,1184 164,1212" fill="white" stroke="#1f2933" stroke-width="2"/>
+<text x="220" y="1204" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">extends (generalization)</text>
+<path d="M64,1252 L164,1252" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polygon points="190,1252 164,1238 164,1266" fill="white" stroke="#1f2933" stroke-width="2"/>
+<text x="220" y="1258" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">implements (realization)</text>
+<polygon points="64,1306 79.0,1298.0 94,1306 79.0,1314.0" fill="white" stroke="#1f2933" stroke-width="2"/>
+<path d="M94,1306 L190,1306" fill="none" stroke="#1f2933" stroke-width="2.5"/>
+<polyline points="172,1295.2 190,1306 172,1316.8" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="220" y="1312" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">aggregation — the bridge field</text>
+<path d="M64,1360 L190,1360" fill="none" stroke="#1f2933" stroke-width="2" stroke-dasharray="9,7"/>
+<polyline points="172,1349.2 190,1360 172,1370.8" fill="none" stroke="#1f2933" stroke-width="2"/>
+<text x="220" y="1366" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">uses / creates (dependency)</text>
+<rect x="64" y="1398" width="126" height="30" fill="#e3f1e4" stroke="#1f2933" stroke-width="2"/>
+<text x="220" y="1420" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#1f2933">I3 added in the extension step</text></svg>
