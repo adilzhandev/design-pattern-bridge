@@ -1,3 +1,4 @@
+import drawing.renderer.AsciiRenderer;
 import drawing.renderer.RasterRenderer;
 import drawing.renderer.Renderer;
 import drawing.renderer.VectorRenderer;
@@ -25,6 +26,7 @@ public class Main {
     private void runDemo() {
         Renderer vector = new VectorRenderer();
         Renderer raster = new RasterRenderer();
+        Renderer ascii = new AsciiRenderer();
 
         checkCombination("T1", new Circle("C-1", CIRCLE_RADIUS, vector), vector,
                 "VECTOR circle radius=2");
@@ -36,6 +38,10 @@ public class Main {
                 "RASTER square side=3 pixels=3x3");
         checkRuntimeSwitch("T5", vector, raster,
                 "VECTOR circle radius=2", "RASTER circle radius=2 pixels=4x4");
+        checkCombination("T6", new Circle("C-6", CIRCLE_RADIUS, ascii), ascii,
+                "ASCII circle radius=2 art=(oooo)");
+        checkCombination("T7", new Square("S-7", SQUARE_SIDE, ascii), ascii,
+                "ASCII square side=3 art=###/###/###");
 
         printSummary();
     }
