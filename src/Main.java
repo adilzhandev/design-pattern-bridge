@@ -16,7 +16,7 @@ public class Main {
     private int total;
 
     public static void main(String[] args) {
-        if (args.length == 1 && DEMO_FLAG.equals(args[0])) {
+        if (args.length == 0 || (args.length == 1 && DEMO_FLAG.equals(args[0]))) {
             new Main().runDemo();
         } else {
             System.out.println("Usage: java -cp out Main " + DEMO_FLAG);
