@@ -1,0 +1,58 @@
+diff --git a/src/Main.java b/src/Main.java
+index c65569b..b0fa35e 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -1,3 +1,4 @@
++import drawing.renderer.AsciiRenderer;
+ import drawing.renderer.RasterRenderer;
+ import drawing.renderer.Renderer;
+ import drawing.renderer.VectorRenderer;
+@@ -25,6 +26,7 @@ public class Main {
+     private void runDemo() {
+         Renderer vector = new VectorRenderer();
+         Renderer raster = new RasterRenderer();
++        Renderer ascii = new AsciiRenderer();
+ 
+         checkCombination("T1", new Circle("C-1", CIRCLE_RADIUS, vector), vector,
+                 "VECTOR circle radius=2");
+@@ -36,6 +38,10 @@ public class Main {
+                 "RASTER square side=3 pixels=3x3");
+         checkRuntimeSwitch("T5", vector, raster,
+                 "VECTOR circle radius=2", "RASTER circle radius=2 pixels=4x4");
++        checkCombination("T6", new Circle("C-6", CIRCLE_RADIUS, ascii), ascii,
++                "ASCII circle radius=2 art=(oooo)");
++        checkCombination("T7", new Square("S-7", SQUARE_SIDE, ascii), ascii,
++                "ASCII square side=3 art=###/###/###");
+ 
+         printSummary();
+     }
+diff --git a/src/drawing/renderer/AsciiRenderer.java b/src/drawing/renderer/AsciiRenderer.java
+new file mode 100644
+index 0000000..66e0d93
+--- /dev/null
++++ b/src/drawing/renderer/AsciiRenderer.java
+@@ -0,0 +1,24 @@
++package drawing.renderer;
++
++import java.util.Collections;
++
++public class AsciiRenderer implements Renderer {
++
++    private static final String PREFIX = "ASCII";
++    private static final String CIRCLE_FILL = "o";
++    private static final String SQUARE_FILL = "#";
++    private static final String ROW_SEPARATOR = "/";
++
++    @Override
++    public String renderCircle(int radius) {
++        String art = "(" + CIRCLE_FILL.repeat(2 * radius) + ")";
++        return PREFIX + " circle radius=" + radius + " art=" + art;
++    }
++
++    @Override
++    public String renderSquare(int side) {
++        String row = SQUARE_FILL.repeat(side);
++        String art = String.join(ROW_SEPARATOR, Collections.nCopies(side, row));
++        return PREFIX + " square side=" + side + " art=" + art;
++    }
++}
